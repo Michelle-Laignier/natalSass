@@ -1,0 +1,111 @@
+@use '../../styles/variables.scss';
+
+.intro, .wines, .aperitivos {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  position: relative;
+
+  height: 100vh;
+
+  h1, h2 {
+    font-size: 5rem;
+    margin-left: 8rem;
+  }
+
+  p {
+    font-size: 2rem;
+    margin-left: 8rem;
+  }
+
+  img {
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    height: 100vh;
+    width: -webkit-fill-available;
+  }
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5rem;
+  margin: 10rem auto;
+
+  position: relative;
+
+  h2 {
+    font-size: 3rem;
+  }
+
+  a {
+    color: variables.$text;
+    text-decoration: none;
+  }
+
+  .link {
+    color: variables.$text;
+    font-size: 1.2rem;
+    text-decoration: none;
+
+    position: absolute;
+    bottom: -100px;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.cards {
+  display: flex;
+  gap: 4rem;
+  justify-content: center;
+  width: 100%;
+}
+
+.wines, .aperitivos {
+  a {
+    color: variables.$text;
+    font-size: 1.5rem;
+    margin-left: 8rem;
+    text-decoration: none;
+    width: fit-content;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+footer {
+  background-color: variables.$footer;
+  height: 120px;
+
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+
+  ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+
+    li {
+      a {
+        color: variables.$text;
+        font-size: 1.2rem;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
