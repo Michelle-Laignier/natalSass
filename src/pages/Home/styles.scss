@@ -9,14 +9,27 @@
 
   height: 100vh;
 
+  @media screen and (max-width: 768px) {
+    align-items: center;
+    text-align: center;
+  }
+ 
   h1, h2 {
     font-size: 5rem;
     margin-left: 8rem;
+
+    @media screen and (max-width: 768px) {
+      margin: 0 2rem;
+    }
   }
 
   p {
     font-size: 2rem;
     margin-left: 8rem;
+
+    @media screen and (max-width: 768px) {
+      margin: 0 2rem;
+    }
   }
 
   img {
@@ -33,7 +46,7 @@
   flex-direction: column;
   align-items: center;
   gap: 5rem;
-  margin: 10rem auto;
+  margin: 10rem 2rem;
 
   position: relative;
 
@@ -48,7 +61,7 @@
 
   .link {
     color: variables.$text;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     text-decoration: none;
 
     position: absolute;
@@ -62,6 +75,7 @@
 
 .cards {
   display: flex;
+  flex-wrap: wrap;
   gap: 4rem;
   justify-content: center;
   width: 100%;
@@ -77,6 +91,10 @@
 
     &:hover {
       text-decoration: underline;
+    }
+
+    @media screen and (max-width: 768px) {
+      margin: 0 2rem;
     }
   }
 }
